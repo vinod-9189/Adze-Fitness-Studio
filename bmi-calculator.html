@@ -30,7 +30,7 @@
         var height = document.getElementById('height').value;
         height = height/100
         var weight = document.getElementById('weight').value; 
-        document.getElementById('BMI').value = weight/(height*height);
+        document.getElementById('BMI').value = Math.floor(weight/(height*height));
 
    }
 </script>
@@ -186,8 +186,8 @@
                         <p style="color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
                             viverra maecenas accumsan lacus vel facilisis.</p>
-                        <form onclick="calculate()">
-                            <div class="row">
+                        <form>
+                            <div class="row" onclick="calculate()">
                                 <div class="col-sm-6">
                                     <input id="height" type="text" placeholder="Height / cm">
                                 </div>
@@ -198,7 +198,7 @@
                                     <input id="BMI" type="text" placeholder="Your BMI">
                                 </div>
                                 <div class="col-lg-12">
-                                    <button type="submit" onclick="calculate()" >Calculate</button>
+                                    <button type="button">Calculate</button>
                                 </div>
                             </div>
                         </form>
